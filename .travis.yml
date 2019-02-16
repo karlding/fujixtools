@@ -15,3 +15,23 @@ jobs:
       script:
         - make release
         - echo "Deploying to GitHub releases ..."
+      deploy:
+        provider: releases
+        file:
+          - cross/fujixtools-linux-386
+          - cross/fujixtools-linux-386.md5
+          - cross/fujixtools-linux-386.sha256
+          - cross/fujixtools-linux-amd64
+          - cross/fujixtools-linux-amd64.md5
+          - cross/fujixtools-linux-amd64.sha256
+          - cross/fujixtools-linux-arm
+          - cross/fujixtools-linux-arm.md5
+          - cross/fujixtools-linux-arm.sha256
+          - cross/fujixtools-linux-arm64
+          - cross/fujixtools-linux-amd64.md5
+          - cross/fujixtools-linux-amd64.sha256
+        on:
+          tags: true
+          repo: karlding/fujixtools
+        api_key:
+          secure: gFSZS8HacVlNZXfxmGF7yMgAHT6/+n18Em0F6zDaEbDaN0dqzK/AvqzlOcmSYutbVNDrzmal0CIa4sFq9GAqq5Oddu9nRyslfKdWstCz1g6iiElc1Sz97gjAUgxDEIHMusORWNoZaCsbYnqbAZqhEMMpEvOc0C68oBX6UwDp64lzhAvPPxoQBRHrghchdKlPssd9trAy05df8Lu6Diah6zXEx/LMKns7LN3e3re4avIvekaY+JX6hSmN3jox//Nc2sgpwSBm/WrAfXo/fY3nAvOrz7iUcLNIo7rJHkkzo1KEU6/v8ODgbkzcbzwwJAe2M6spcqrFe8XhUn8HY06qFJEVrT4aQiY0+aeuHL9/5/B09LYiuNpkX1fIBw9alxn5oCWj2c5RkC8bdAbqHPj0x5fZMTdnLzr+CKSMBweiYH4cHFxd44Zr3wspNJn8A/I8lq0IpT4iPBUyqxn6e1Jme6+WoeUGwK3BIcmunral39NLV3vS3k41eJNZJcWKTn0DiPG5oBA0iSAYDZ/aj/kntr/uUBDrunyvrH3hS1l25r9xuHxUpCqgZV+aQ0KU1+Ngk2UY63USBFGIRyvlNPMIuATg+oh9dv6Ib7HRr8DB6yFPW6jp+iBW71tGzgeUpGt8UbougqbgkI1pGNz8udMbqsmckDp/bhNILpSJcJBNeHM=
