@@ -30,6 +30,7 @@ jobs:
           - cross/fujixtools-linux-arm64
           - cross/fujixtools-linux-amd64.md5
           - cross/fujixtools-linux-amd64.sha256
+        skip_cleanup: true
         on:
           tags: true
           repo: karlding/fujixtools
